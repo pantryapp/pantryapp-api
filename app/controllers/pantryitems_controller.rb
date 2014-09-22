@@ -1,4 +1,5 @@
 class PantryitemsController < ApplicationController
+
   # GET /pantryitems
   # GET /pantryitems.json
   def index

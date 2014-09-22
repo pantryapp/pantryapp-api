@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   resources :pantryitems, except: [:new, :edit]
 
-  resources :cors
-  match '/', :to => proc {|env| [200, {'Content-Type' => 'text/plain'}, ["Hello world"]] },
-             :via => [:get, :post, :put, :delete, :options, :head, :patch]
+  # resources :cors
+  # match '/', :to => proc {|env| [200, {'Content-Type' => 'text/plain'}, ["Hello world"]] },
+  #            :via => [:get, :post, :put, :delete, :options, :head, :patch]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
