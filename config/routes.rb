@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :groceries, except: [:new, :edit]
   resources :pantryitems, except: [:new, :edit]
 
   # resources :cors

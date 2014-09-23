@@ -53,7 +53,7 @@ class PantryitemsController < ApplicationController
   private
 
   def pantryitem_params
-    params.require(:pantryitem).permit(:name, :outofstock, :slug)
+    params.permit(:name, :outofstock, :slug)
   end
 
 end
