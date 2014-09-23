@@ -33,8 +33,8 @@ class PantryitemsController < ApplicationController
   # PATCH/PUT /pantryitems/1.json
   def update
     @pantryitem = Pantryitem.find(params[:id])
-
-    if @pantryitem.update(params[:pantryitem])
+    
+    if @pantryitem.update(pantryitem_params)
       head :no_content
     else
       render json: @pantryitem.errors, status: :unprocessable_entity
