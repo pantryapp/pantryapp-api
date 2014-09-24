@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20140923201346) do
   create_table "pantryitems", force: true do |t|
     t.string   "name"
     t.boolean  "outofstock"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "slug"
   end
 
 end
