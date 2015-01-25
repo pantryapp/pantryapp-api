@@ -33,7 +33,7 @@ class PantryitemsController < ApplicationController
   # PATCH/PUT /pantryitems/1.json
   def update
     @pantryitem = Pantryitem.find(params[:id])
-    
+
     if @pantryitem.update(pantryitem_params)
       head :no_content
     else
@@ -53,7 +53,7 @@ class PantryitemsController < ApplicationController
   private
 
   def pantryitem_params
-    params.permit(:name, :outofstock, :slug)
+    params.permit(:name, :outofstock, :slug, :category)
   end
 
 end
