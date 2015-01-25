@@ -10,6 +10,8 @@ gem 'sqlite3', :group => :development
 
 gem 'pg', :group => :production
 
+gem 'rails_12factor'
+
 gem 'rack-cors', :require => 'rack/cors'
 
 
