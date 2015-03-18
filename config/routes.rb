@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :receipes, except: [:new, :edit]
   resources :groceries, except: [:new, :edit]
   resources :pantryitems, except: [:new, :edit]
+  resources :items, except: [:new, :edit]
 
   # resources :cors
   # match '/', :to => proc {|env| [200, {'Content-Type' => 'text/plain'}, ["Hello world"]] },
