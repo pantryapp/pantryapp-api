@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.where(query_params)
 
     render json: @items
   end
@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
 
-    if @item.update(pantryitem_params)
+    if @item.update(item_params)
       head :no_content
     else
       render json: @item.errors, status: :unprocessable_entity
@@ -53,6 +53,10 @@ class ItemsController < ApplicationController
 
   def item_params
     params.permit(:name, :outofstock, :slug, :category, :store_category)
+  end
+
+  def query_params
+    params.permit(:store_category, :name, :id)
   end
 
 end
